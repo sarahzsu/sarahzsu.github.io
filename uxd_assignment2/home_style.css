@@ -1,0 +1,906 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+    /* un-comment when want to see the outline of elements*/
+    /* outline: 1px dotted red; */
+}
+html {
+    scroll-behavior: smooth;
+}
+
+/* ASSETS */
+
+.btn-1 {
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.85);
+    font-family: 'Vollkorn', serif;
+    letter-spacing: 3px;
+
+    /* underline */
+    text-decoration: underline;
+    text-underline-offset: 3px;
+
+    transition: all 0.25s;
+}
+.btn-1:hover {
+    color: white;
+}
+
+
+/* 
+
+    HERO START
+
+*/
+
+.hero {
+    /* sizing */
+    width: 100%;
+    height: 100vh;
+
+    display: grid;
+
+    position: relative;
+}
+
+.banner-pic {
+    /* make it the background */
+    position: absolute;
+    z-index: -1;
+
+    /* sizing */
+    width: 100%;
+}
+
+/* 
+
+    TOP NAVIGATION BAR
+
+*/
+.topnav {
+    position: fixed;
+    width: 100%;
+
+    
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    padding: 20px 8% 0 8%;
+    align-items: center;
+    
+    transition: background-color 0.4s ease-in-out;
+    transition: transform 0.4s ease-in;
+}
+
+.hotel-logo {
+    grid-column: 1;
+}
+.hotel-logo a {
+    text-decoration: none;
+
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
+
+    /* font stlying */
+    font-size: 35px;
+    font-family: 'Gideon Roman', cursive;
+    color: whitesmoke;
+    letter-spacing: 5px;
+    line-height: 100px;
+
+    /* make the logo stick to LEFT 
+    (using justify-self since 
+    container is grid display) */
+    justify-self: left;
+
+    /* when transitioning adter nav bar scrolls past hero */
+    transition: color 0.4s ease-in-out;
+}
+
+.topnav ul{
+    /* remove default style for list */
+    list-style: none;
+    
+    /* display items in the same line */
+    display: inline-flex;
+
+    /* make the logo stick to RIGHT 
+    (using justify-self since 
+    container is grid display) */
+    justify-self: right;
+
+    /* TODO: (try to find out why)
+    align it to other pages*/
+    /* margin-right: -15px; */
+}
+.topnav ul li{
+    /* spacing between links in nav bar */
+    margin-left: 66px;
+}
+.topnav ul li a{
+    /* remove default style for links*/
+    text-decoration: none;
+
+    /* contrast to bg */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6);
+
+    /* font styling */
+    color: whitesmoke; 
+    font-size: 18px;
+    font-family: 'Varela', sans-serif;
+
+    /* when transitioning adter nav bar scrolls past hero */
+    transition: color 0.2s ease-in-out;
+}
+.topnav ul li a:hover{
+    /* items hover style */
+
+    /* add underline */
+    text-decoration: underline;
+    text-underline-offset: 3px;
+
+    /* make lighter color */
+    opacity: 85%;
+
+
+    transition: 0.3s ease-in-out;
+}
+#current-page {
+    /* page you are currently in style */
+    text-decoration: underline;
+    text-decoration-thickness: 1.5px;
+    text-underline-offset: 2px;
+    opacity: 85%;
+}
+
+.booknow-btn{
+    /* make it look centered / align with other items */
+    position: relative;
+    top: -5px;
+
+    /* remove default button style */
+    text-decoration: none;
+    border: none;
+
+    /* font styling */
+    font-size: 18px;
+    font-family: 'Varela', sans-serif;
+    color: #1E3050;
+
+    /* button styling */
+    background-color: #91c9f0;
+
+    /* sizing */
+    height: 32px;
+    width: 125px;
+
+    border-radius: 10px;
+    
+    box-shadow: 1px 1px 3.5px rgba(0, 0, 0, 0.6);
+
+    /* transition when hovering over button */
+    transition: all 0.3s;
+    
+    /* cursor change when hovering */
+    cursor: pointer;
+}
+.booknow-btn:hover{
+    /* button hover style */
+    box-shadow: 4px 4px 5px rgba(0, 0, 0, 0.5);
+}
+
+/* Navbar changes color after scrolling past hero */
+
+.topnav.scrolled {
+
+    /* adding contrast to new environment */
+    background-color: #4C79AE;
+    box-shadow: 1px 0px 11px rgba(0, 0, 0, 0.519);
+
+    /* remove linear gradient overlay */
+    background-image: none;
+
+    /* make items in container true center of navbar */
+    padding-top: 0;
+
+    /* restricting the width to 
+    make it shorter in order to 
+    have the main focus of page 
+    be the contents and 
+    not the nav bar */
+    height: 90px;
+
+    /* make navbar be infront of any content */
+    z-index: 1000;
+}
+.topnav.scrolled .hotel-logo a{
+    /* make logo contrast from new navbar background color */
+    /* color: #1E3050; */
+    color: white;
+}
+.topnav.scrolled ul li a{
+    /* make the navbar items contrast from new navbar background color */
+    /* color: #1E3050; */
+    font-weight: bold;
+
+    text-shadow: none;
+}
+
+
+
+/* 
+
+Banner / Label down
+
+*/
+.hero-label {
+    display: inline-flex;
+
+    /* positioning */
+    position: relative;
+    justify-self: center;
+    align-self: center;
+    top: 33%;
+
+    /* style */
+    background-color: white;
+    border-radius: 10px;
+
+    padding: 4px 30px 1px;
+
+    /* font */
+    font-family: 'Vollkorn', serif;
+    letter-spacing: 3px;
+}
+
+/* 
+
+    HERO END
+
+*/
+
+
+
+
+
+
+
+
+
+/* 
+
+    TRANSITION: HERO -> FEATURED
+
+*/
+
+.hero-to-main-gradient {
+    position: relative;
+    height: 150px;
+    background: linear-gradient(180deg, #012F3E 0%, #013140 30.16%, #27130D 100%);
+    top: 50px;
+    z-index: 100;
+}
+
+
+/* 
+
+    MAIN
+
+*/
+
+.main-area {
+    width: 100%;
+    top: 20px;
+
+    background-color: #f5f5f5;
+}
+
+
+
+/* 
+
+    FEATURED SECTION
+
+*/
+
+
+.feature-area {
+    display: inline-block;
+}
+.feature-content {
+    background: linear-gradient(360deg, #000000 8%, transparent 65%), url(/media/feature_bg.jpg);
+    background-size: 100% 100%;
+    position: relative;
+    
+    padding: 15vh 20vh 15vh;
+}
+.feature-content h1 {
+    font-family: 'Gideon Roman', cursive;
+    font-size: 80px;
+    font-weight: 100;
+    color: white;
+}
+.feature-content h2 {
+    font-family: 'Gideon Roman', cursive;
+    font-size: 40px;
+    font-weight: 100;
+    color: white;
+}
+.feature-content p {
+    font-family: 'Poppins', sans-serif;
+    font-size: 18px;
+    color: #B6A57B;
+    margin: 20px 40px;
+    width: 60%;
+}
+
+.feature-label-and-gallery {
+    display: flex;
+    justify-content: space-between;
+    background-color: black;
+    padding-bottom: 8vh;
+}
+.feature-label {
+    width: 35%;
+    display: grid;
+}
+.feature-label h1 {
+    margin: 10vh 0 0 5vh;
+    font-family: 'Gideon Roman', cursive;
+    font-size: 70px;
+    font-weight: 100;
+    color: #EBBF7A;
+}
+.feature-label hr {
+    margin-top: 40px;
+    border: none;
+    height: 4px;
+    color: white;
+    background-color: white;
+}
+.feature-label .btn-1 {
+    margin-top: 270px;
+    justify-self: right;
+}
+
+
+/* 
+
+Features Gallery
+
+*/
+.feature-gallery { /* containter for items / images */
+    width: 70%;
+    /* make items / images align next to each other */
+    display: flex;
+
+    /* styling of gallery */
+    width: 60%;
+    height: 500px;
+    margin-right: 30px;
+    margin-left: 15px;
+}
+.item {
+    /* make items fill containter */
+    width: 100%;
+    height: 100%;
+
+    /* margin between images on both sides of image/item */
+    margin: 0 2.5px;
+
+    /* the size of item when not in focus */
+    flex: 1;
+
+    /* use of pointer if later want to add a link to the images */
+    cursor: pointer;
+
+    /* transition when going in and out of focus */
+    transition: flex 0.3s ease;
+
+    /* overlay when not in focus */
+    filter: brightness(80%);
+}
+.item img {
+    /* make image fit item container */
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+    /* styling of items */
+    border-radius: 10px;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.447);
+    /* note: can't put this in item since item is not visible */
+}
+.item.main,
+.item.show {
+    /* remove overlay */
+    filter: brightness(95%);
+
+    /* make it flex when in focus */
+    flex: 10;
+}
+
+
+
+
+/* 
+
+    SECTION NAVIGATION SECTION
+
+*/
+
+.section-nav {
+    background: #131D2C;
+    border-width: 3px 0px;
+    border-style: solid;
+    border-color: #BF9447;
+
+    padding: 5vh 25vh;
+    display: grid;
+    justify-content: center;
+}
+.section-nav h2 {
+    color: white;
+    font-family: 'Gideon Roman';
+    font-weight: 400;
+    font-size: 25px;
+    text-align: center;
+}
+.section-nav ul {
+    list-style: none;
+    margin-top: 30px;
+    justify-content: center;
+}
+.section-nav ul li {
+    display:inline-block; 
+    padding: 15px 30px;
+    position:relative;
+    height: 55px;
+}
+.section-nav ul li:not(:last-child)::after {
+    content:""; 
+    border:1px solid #e2e2e2;
+    border-width: 1px 1px 0 0;
+    position:absolute; 
+    right:-3px; 
+    top:0; 
+    height:100%;
+}
+.section-nav ul li a {
+    text-decoration: none;
+    color: white;
+    text-align: center;
+    font-family: 'Gideon Roman';
+    font-weight: 400;
+    font-size: 20px;
+}
+
+
+
+/* 
+
+    TRANSITION: SECTION NAV -> SUITES
+
+*/
+
+
+
+
+.rounded-corner-transition {
+    height: 150px;
+    background-color: black;
+}
+.rounded-corner-transition div {
+    height: 70px;
+    position: relative;
+    top: 80px;
+    background: #f5f5f5;
+    border: none;
+    border-top-left-radius: 80px;
+    border-top-right-radius: 80px;
+}
+
+
+
+
+/* 
+
+    SUTIES SECTION
+
+*/
+
+
+.rooms-area {
+    margin-top: 170px;
+    display: grid;
+}
+.rooms-area h1 {
+    justify-self: center;
+
+    font-family: 'Gideon Roman';
+    font-weight: 400;
+    font-size: 80px;
+
+
+    color: #000000;
+
+    text-shadow: 2px 4px 10px rgba(0, 0, 0, 0.25);
+}
+
+.rooms-gallery {
+    
+    /* have items in a row*/
+    display: inline-flex;
+
+    /* positioning of gallery */
+    width: 100%;
+    height: 700px;
+    margin-top: 15px;
+
+    /* setting main image */
+    background-image: url(media/room2.jpg);
+    background-size: cover;
+
+    transition: all 0.2s ease;
+    /* box-shadow: 1px 5px 25px rgba(2, 2, 2, 0.1); */
+}
+
+/* area of each room */
+.room-btn { 
+    /* make it split the rooms-gallery area into 3 parts */
+    width: 33.33%;
+    height: 100%;
+
+    /* styling the header */
+    /* make the header into the middle of area */
+    display: grid;
+    justify-content: center;
+    /* can replace padding-top with align-items: center; 
+    but don't want it at the exact middle*/
+    padding-top: 340px;
+
+    /* overlay when not hovering */
+    background-color: rgba(0, 0, 0, 0.4);
+
+    /* TODO: add a link when clicked on to direct them to the room */
+    cursor: pointer;
+}
+
+
+.room-btn h2 {
+    /* room name header */
+    font-family: 'Quattrocento Sans', sans-serif;
+    font-weight: 400;
+    font-size: 25px;
+    text-align: center;
+    color: rgba(255, 255, 255, 0.6);
+}
+.room-btn .btn-1 {
+    justify-self: center;
+    height: 22px;
+    color: transparent;
+}
+.room-btn.main,
+.room-btn.show {
+    /* when it is in focus, the room-btn area will 
+    lighten the overlay as well as have gradients on the sides */
+    background-color: rgba(0, 0, 0, 0.28);
+    box-shadow: 12px 0 20px -4px rgba(0, 0, 0, 0.2), -12px 0 20px -4px rgba(0, 0, 0, 0.2);
+
+    color: white;
+}
+.room-btn.main h2,
+.room-btn.show h2,
+.room-btn.main .btn-1,
+.room-btn.show .btn-1{
+    /* make room header and btn font color brighter */
+    color: white;
+}
+
+
+.reviews-area {
+    margin-top: 70px;
+    background: #05314A;
+    height: 300px;
+    box-shadow: 3px 3px 48px -15px rgba(0,0,0,0.75) inset;
+
+    display: grid;
+    align-items: center;
+}
+.reviews-area p {
+    width: 50%;
+    justify-self: center;
+    text-align: center;
+
+    color: whitesmoke;
+    font-family: 'Vollkorn';
+    font-weight: 400;
+    font-size: 15px;
+    letter-spacing: 3px;
+}
+
+
+
+
+
+/* 
+
+    DINING & EVENTS SECTION
+
+*/
+
+
+.dining-and-events {
+    margin-top: 300px;
+    height: 1500px;
+
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 2fr 2fr;
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+}
+.dining-and-events p {
+    color: #B6A57B;
+    font-family: 'Poppins';
+    font-weight: 500;
+    font-size: 20px;
+}
+.dining-and-events .btn-1 {
+    color: rgba(0, 0, 0, 0.7);
+    font-size: 18px;
+
+    /* underline */
+    text-decoration: underline;
+    text-underline-offset: 3px;
+}
+.dining-and-events .btn-1:hover {
+    color: black;
+    text-shadow: 4px 4px 7px rgba(0,0,0,0.2);
+}
+/* 
+
+DINING SECTION
+
+*/
+.dining-and-events .dining {
+    grid-row: 1;
+    display: grid;
+    grid-template-columns: 2fr 1fr 2fr;
+    grid-template-rows: 1fr;
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+}
+.dining .content {
+    grid-column: 1;
+
+    padding: 20px 0 20px 75px;
+}
+.dining .header {
+    text-align: center;
+    position: relative;
+}
+.dining h2 {
+    font-family: 'Noto Serif';
+    font-weight: 100;
+    font-size: 70px;
+    letter-spacing: 0.03em;
+
+    z-index: -1;
+}
+.dining h1 {
+    color: #BF9447;
+    position: absolute;
+    top: 25px;
+    z-index: 1;
+
+    font-family: 'Noto Serif';
+    font-weight: 100;
+    font-size: 115px;
+}
+.dining p {
+    position: relative;
+    padding-top: 40px;
+}
+.dining .btn-1 {
+    position: relative;
+    top: 50px;
+}
+.dining .image {
+    grid-column: 2 / -1;
+    padding: 80px 90px 0;
+}
+.dining img {
+    width: 100%;
+}
+/* 
+
+EVENTS SECTION
+
+*/
+.dining-and-events .events {
+    grid-row: 2;
+    display: grid;
+    grid-template-columns: 2fr 1fr 2fr;
+    grid-template-rows: 1fr;
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+}
+.events .image {
+    grid-column: 1 / 3;
+    grid-row: 1;
+
+    padding-left: 50px;
+    padding-right: 150px;
+}
+.events img {
+    z-index: 1;
+    width: 100%;
+    position: relative;
+    top: -230px;
+}
+.events .content {
+    z-index: 2;
+    grid-column: 2 / -1;
+    grid-row: 1;
+}
+.events h1 {
+    color: black;
+    font-family: 'Noto Serif';
+    font-weight: 100;
+    font-size: 100px;
+    text-align: center;
+
+    position: relative;
+    left: -55px;
+}
+.events .body {
+    padding: 30px 75px 0 200px;
+}
+.events .btn-1 {
+    position: relative;
+    top: 50px;
+}
+
+
+
+
+
+/* 
+
+    AMENITIES SECTION
+
+*/
+
+.amenities {
+    margin-top: 200px;
+    display: grid;
+}
+/*
+
+Header
+
+*/
+.amenities h1 {
+    justify-self: center;
+
+    font-family: 'Gideon Roman';
+    font-weight: 400;
+    font-size: 80px;
+
+    color: #000000;
+
+    text-shadow: 2px 4px 10px rgba(0, 0, 0, 0.25);
+    z-index: 2;
+}
+/*
+
+Area
+
+*/
+.amenities-gallery {
+    position: relative;
+    height: 700px;
+}
+/*
+
+Items
+
+*/
+.amenities-gallery ul {
+    position: relative;
+    z-index: 3;
+    padding: 50px 40px;
+
+    list-style: none;
+    display: inline-flex;
+}
+.amenities-gallery li {
+    /* display: inline; */
+    position: relative;
+    width: 25%;
+}
+.amenities-gallery li:not(:last-child) { 
+    margin-right: 15px;  
+ }
+.amenities-gallery img {
+    width: 100%;
+}
+.amenities-gallery .overlay {
+    position: absolute;
+    display: grid;
+    width: 100%;
+    bottom: 4px;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    overflow: hidden;
+    align-items: self-end;
+
+    height: 40px;
+    /* transition: height 0s ease; */
+    transition:  0.5s;
+}
+.amenities-gallery li:hover .overlay {
+    height: calc(100% - 4px);
+}
+.amenities-gallery .text {
+    padding: 5px 50px 60px 18px;
+}
+.amenities-gallery h2 {
+    color: white;
+    font-family: 'Vollkorn';
+    font-weight: 10px;
+    font-size: 23px;
+    letter-spacing: 2px;
+
+    /* add underline */
+    text-decoration: underline;
+    text-underline-offset: 5px;
+}
+.amenities-gallery p {
+    padding-top: 10px;
+
+    color: white;
+    font-family: 'Varela';
+    font-weight: 100;
+    font-size: 15px;
+    line-height: 23px;
+}
+.amenities-gallery a {
+    text-decoration: none;
+
+    position: relative;
+    top: 20px;
+
+
+    color: rgba(255, 255, 255, 0.8);
+    font-family: 'Vollkorn';
+    font-weight: 100;
+    font-size: 15px;
+    letter-spacing: 3px;
+
+    background-color: rgba(255, 255, 255, 0.15);
+    padding: 4px 8px;
+
+    transition: all 0.2s ease-in-out;
+}
+.amenities-gallery a:hover {
+    color: white;
+    background-color: rgba(255, 255, 255, 0.35);
+}
+/*
+
+Background of Gallery
+
+*/
+.amenities-bg {
+    position: absolute;
+    width: 100%;
+    height: 400px;
+    z-index: 1;
+    top: -50px;
+    background-color: #E9E9E9;
+}
+
+
