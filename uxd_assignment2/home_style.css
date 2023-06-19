@@ -308,7 +308,7 @@ Banner / Label down
     display: inline-block;
 }
 .feature-content {
-    background: linear-gradient(360deg, #000000 8%, transparent 65%), url(../media/feature_bg.jpg);
+    background: linear-gradient(360deg, #000000 8%, transparent 65%), url(./media/feature_bg.jpg);
     background-size: 100% 100%;
     position: relative;
     
@@ -538,7 +538,7 @@ Features Gallery
     margin-top: 15px;
 
     /* setting main image */
-    background-image: url(../media/room2.jpg);
+    background-image: url(./media/room2.jpg);
     background-size: cover;
 
     transition: all 0.2s ease;
