@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Riztonia - Home Page</title>
+    <meta name="viewport" content="width=device-width", initial-scale="1.0">
+    <link rel="stylesheet" href="home_style.css">
+
+    <!--Importing icons-->
+    <script src="https://kit.fontawesome.com/d668823cf8.js" crossorigin="anonymous"></script>
+
+    <!--Importing fonts-->
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=EB+Garamond&family=Gideon+Roman&family=Montserrat:wght@500&family=Newsreader:opsz,wght@6..72,200;6..72,300;6..72,400&family=Poppins:wght@300;600&family=Varela&display=swap&family=Vollkorn&display=swap&family=Quattrocento+Sans:wght@700&family=Noto+Serif:wght@300;400');
+    </style>
+    
+</head>
+
+<body>
+
+    <!-- NAV BAR -->
+    <nav class="topnav">
+
+        <div class="navigation">
+
+            <div class="nav-menu-area"></div>
+
+            <button class="hamburger" onclick="show()">
+                <div id="bar1" class="bar"></div>
+                <div id="bar2" class="bar"></div>
+                <div id="bar3" class="bar"></div>
+            </button>
+
+            
+
+            <div class="nav-menu">
+                <ul>
+                    <li><a href="">Stay</a></li>
+                    <li><a href="">Services</a></li>
+                    <li><a href="">Dining</a></li>
+                    <li><a href="">Events</a></li>
+                    <li><a href="">Others</a></li>
+                </ul>
+            </div>
+
+        </div>
+
+        <div class="nav-content">
+
+            <a href="index.html" class="hotel-logo"><img src="./media/logo.png" alt=""></a>
+
+            <a href="" class="booknow-btn">Book Now</a>
+        
+        </div>
+
+    </nav>
+
+    <div class="main-section">
+
+        <!-- Top Navigation Bar-->
+        <header class="hero">
+
+            <!-- HERO PICTURE -->
+            <img class="banner-pic" src="media/hero.jpg" alt="">
+
+            <!-- Label Down -->
+            <div class="hero-label">
+                <p>STEP INTO LUXURY ⇂</p>
+            </div>
+
+        </header>
+
+        <div class="hero-to-main-gradient">
+            <!-- Blue to Black Gradient (done in style sheet-->
+        </div>
+
+        <!-- CONTENT AREA -->
+        <main class="main-area">
+
+            <!-- FEATURES GALLERY-->
+            <section class="feature-area">
+                <!--TODO: background image to be gradient from transparent to black where it becomes fully black in the middle down -->
+
+                <section class="feature-content">
+                    <h1>
+                        LUXURY
+                        <br>
+                        REDEFINED
+                    </h1>
+
+                    <h2>
+                        experience more
+                        <br>
+                        with Riztonia.
+                    </h2>
+
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                        Vivamus sem neque, cursus nec convallis ac, egestas in justo. 
+                        Nullam mattis eros vel convallis laoreet. Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                        Vivamus sem neque, cursus nec convallis ac, egestas in justo. 
+                        Nullam mattis eros vel convallis laoreet.
+                    </p>
+
+                </section>
+
+                <section class="feature-label-and-gallery">
+
+                    <section class="feature-label">
+
+                        <h1>FEATURED</h1>
+
+                        <hr>
+
+                        <a class="btn-1" href="#">EXPLORE MORE</a>
+
+                    </section>
+
+
+                    <section class="feature-gallery">
+
+                        <div class="item main"><img src="media/feature1.jpg" alt=""></div>
+                        <div class="item"><img src="media/feature2.jpg" alt=""></div>
+                        <div class="item"><img src="media/feature3.jpg" alt=""></div>
+                        <div class="item"><img src="media/feature4.jpg" alt=""></div>
+                        <div class="item"><img src="media/feature5.jpg" alt=""></div>
+                        
+                    </section>
+
+                </section>
+
+            </section>
+
+
+            <section class="section-nav">
+
+                <h2>GO TO SECTION:</h2>
+
+                <ul>
+                    <li><a href="#suites">Suites</a></li>
+                    <li><a href="#dining">Dining</a></li>
+                    <li><a href="#events">Events</a></li>
+                    <li><a href="#amenities">Amenities</a></li>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Location</a></li>
+                </ul>
+
+                <!-- https://stackoverflow.com/questions/53567706/how-do-i-include-short-vertical-lines-in-between-links-in-navbar -->
+            </section>
+
+
+            <section class="rounded-corner-transition">
+                <div></div>
+            </section>
+
+
+            <!-- ROOMS GALLERY -->
+            <section class="rooms-area" id="suites">
+
+                <h1>SUITES</h1>
+
+                <section class="rooms-gallery">
+                    <div class="room-btn" onmouseover='imgChange("media/room1.jpg")'><h2>HILLSIDE POOL SUITES</h2><a class="btn-1" href="">VIEW MORE</a></div>
+                    <div class="room-btn main show" onmouseover='imgChange("media/room2.jpg")'><h2>BEACHFRONT SUITES</h2><a class="btn-1" href="">VIEW MORE</a></div>
+                    <div class="room-btn" onmouseover='imgChange("media/room3.jpg")'><h2>SEAVIEW GARDEN SUITES</h2><a class="btn-1" href="">VIEW MORE</a></div>
+                </section>
+
+                <!-- REVIEWS SECTION-->
+                <section class="reviews-area">
+
+                    <p>
+                        "A captivating sanctuary of unparalleled elegance. 
+                        The beachfront suite presents awe-inspiring ocean views, 
+                        impeccable service, and a serene ambiance, ensuring an 
+                        unforgettable experience for those with discerning tastes 
+                        and a penchant for sophistication."
+                    </p>
+
+                </section>
+
+            </section>
+
+
+
+            <section class="dining-and-events">
+
+                <!-- hhttps://stackoverflow.com/questions/5182170/how-to-let-an-html-image-overlap-another -->
+
+                <div class="dining" id="dining">
+
+                    <div class="content">
+
+                        <div class="header">
+                            <!-- <img src="media/dining_text.png" alt=""> -->
+
+                            <h2>EXPERIENCE</h2>
+                            <h1>MODERN</h1>
+                            <br><br>
+                            <h2>DINING</h2>
+
+                        </div>
+
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                            Vivamus sem neque, cursus nec convallis ac, egestas in justo. 
+                            Nullam mattis eros vel convallis laoreet. 
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        </p>
+
+                        <a class="btn-1" href="#">Make your dinner reservation →</a>
+
+                    </div>
+
+                    <div class="image">
+                        <img src="media/dining.jpeg" alt="">
+                    </div>
+
+                </div>
+
+                <div class="events" id="events">
+
+                    <div class="image">
+                        <img src="media/events.png" alt="">
+                    </div>
+
+                    <div class="content">
+
+                        <h1>
+                            <span style="color:#fcfcfc">UN</span>PARALLELED
+                            <br>
+                            EVENTS
+                        </h1>
+
+                        <div class="body">
+
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                                Vivamus sem neque, cursus nec convallis ac, egestas in justo. 
+                                Nullam mattis eros vel convallis laoreet. 
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                            </p>
+
+                            <a class="btn-1" href="#">Plan your event →</a>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+
+
+
+            <section class="amenities">
+
+                <h1>AMENITIES</h1>
+
+                <div class="amenities-gallery" id="amenities">
+                    <!-- https://www.youtube.com/watch?v=yfg9ChTmuKM -->
+
+                    <ul>
+                        <li>
+
+                            <img src="media/amenities1.jpg" alt="">
+
+                            <div class="overlay">
+
+                                <div class="text">
+
+                                    <h2>Spa & Wellness</h2>
+                                    <p>
+                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                                        Vivamus sem neque, cursus nec convallis ac, egestas in justo. 
+                                        Nullam mattis eros vel convallis laoreet.
+                                    </p>
+
+                                    <a href="">view more →</a>
+                                
+                                </div>
+
+                            </div>
+
+                        </li>
+
+                        <li>
+
+                            <img src="media/amenities2.jpeg" alt="">
+
+                            <div class="overlay">
+
+                                <div class="text">
+
+                                    <h2>Pool & Fitness</h2>
+                                    <p>
+                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                                        Vivamus sem neque, cursus nec convallis ac, egestas in justo. 
+                                        Nullam mattis eros vel convallis laoreet.
+                                    </p>
+
+                                    <a href="">view more →</a>
+                                
+                                </div>
+
+                            </div>
+
+                        </li>
+
+                        <li>
+
+                            <img src="media/amenities3.jpeg" alt="">
+
+                            <div class="overlay">
+
+                                <div class="text">
+
+                                    <h2>Yacht & Beach Club</h2>
+                                    <p>
+                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                                        Vivamus sem neque, cursus nec convallis ac, egestas in justo. 
+                                        Nullam mattis eros vel convallis laoreet.
+                                    </p>
+
+                                    <a href="">view more →</a>
+
+                                </div>
+
+                            </div>
+
+                        </li>
+
+                        <li>
+
+                            <img src="media/amenities4.jpg" alt="">
+
+                            <div class="overlay">
+
+                                <div class="text">
+
+                                    <h2>Concierge Service</h2>
+                                    <p>
+                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                                        Vivamus sem neque, cursus nec convallis ac, egestas in justo. 
+                                        Nullam mattis eros vel convallis laoreet.
+                                    </p>
+
+                                    <a href="">view more →</a>
+                                
+                                </div>
+
+                            </div>
+
+                        </li>
+                    </ul>
+
+
+                    <div class="amenities-bg"></div>
+                </div>
+
+            </section>
+
+
+
+            <section class="about-us">
+
+                <div class="hovering-section">
+
+                    <div class="content">
+                        <h1>About Us</h1>
+                        <p>
+                            Lorem ipsum dolor sit amet, 
+                            consectetur adipiscing elit. 
+                            Vivamus sem neque, cursus nec 
+                            convallis ac, egestas in justo. 
+                            Nullam mattis eros vel convallis 
+                            laoreet.
+                        </p>
+                    </div>
+
+                    <img class="image" src="./media/aboutus.jpg" alt="">
+
+                </div>
+
+            </section>
+
+
+        </main>
+    
+    </div>
+
+
+    <footer>
+        <!-- ADD FOOTER-->
+    </footer>
+</body>
+
+
+
+
+<script>
+    // Menu Button
+    function show() {
+        document.querySelector('.hamburger').classList.toggle('open')
+        document.querySelector('.navigation').classList.toggle('active')
+        document.querySelector('.main-section').classList.toggle('outfoucs')
+        document.querySelector('html').classList.toggle('disable-scroll')
+    }
+
+    // document.addEventListener('click', () => {
+        
+    //     if (document.querySelector('.main-section').classList.contains('.outfocus') == true) {
+    //         show()
+    //     }
+    // })
+
+    // Making the Topnav change when scrolling past a certain point in page
+    document.addEventListener('scroll', () => {
+        const navbar = document.querySelector('.topnav');
+
+        if (window.scrollY > 200){
+            navbar.classList.add('scrolled')
+        } else {
+            navbar.classList.remove('scrolled')
+        }
+    })
+
+
+    // Features Gallery Interactive
+    const feature_items = document.querySelectorAll('.item');
+    feature_items.forEach(item => {
+        item.addEventListener('mouseover', () => {
+            // first remove .show and .main from All items
+            feature_items.forEach(item => item.classList.remove('show', 'main'))
+
+            // then add .show to only the item that was clicked
+            item.classList.add('show')
+        })
+    })
+
+
+    // ROOM Gallery Interactive
+    function imgChange(e) {
+        document.querySelector('.rooms-gallery').style.backgroundImage = "url("+e+")";
+    }
+    const room_btns = document.querySelectorAll('.room-btn');
+    room_btns.forEach(item => {
+        item.addEventListener('mouseover', () => {
+            // first remove .show and .main from All items
+            room_btns.forEach(item => item.classList.remove('show', 'main'))
+
+            // then add .show to only the item that was clicked
+            item.classList.add('show')
+        })
+    })
+
+
+
+</script>
+</html>
