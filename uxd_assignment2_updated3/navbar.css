@@ -1,0 +1,166 @@
+/* 
+
+    TOP NAVIGATION BAR
+
+*/
+
+/* area of naviagation bar */
+.topnav {
+    width: 100%;
+    height: 13vh;
+
+    position: fixed;
+    background: linear-gradient(180deg, rgba(0,0,0,0.6685267857142857) 0%, rgba(0,0,0,0.41642594537815125) 37%, rgba(78,78,78,0.25956320028011204) 64%, rgba(255,255,255,0) 91%, rgba(255,255,255,0) 100%);
+    
+    z-index: 1000;
+}
+
+/* hamburger menu area */
+.navigation {
+    position: fixed;
+    left: -500px;
+
+    width: 350px;
+    height: 100%;
+
+    /* background-color: #1a4757; */
+    background-image: url(./media/sidebar.png);
+    background-size: cover;
+    
+
+    transition: 0.5s;
+}
+.navigation.active {
+    /* when it is toggled */
+    left: 0;
+}
+
+/* menu icon */
+.hamburger, .bar {
+    position: fixed;
+}
+.hamburger {
+    display: block;
+    top: 5%;
+    right: 95%;
+    width: 30px;
+    height: 30px;
+    transform: translate(-50%);
+    border: 0;
+    background: 0 0;
+}
+.bar {
+    top: 3px;
+    background: white;
+    width: 100%;
+    height: 4px;
+    transition: all 0.3s ease-in;
+}
+#bar2 {
+    top: 11px;
+}
+#bar3 {
+    top: 19px;
+}
+
+.hamburger.open #bar1 {
+    background-color: white;
+    transform: rotate(45deg) translate(6px, 5px);
+}
+.hamburger.open #bar2 {
+    background-color: transparent;
+}
+.hamburger.open #bar3 {
+    background-color: white;
+    transform: rotate(-45deg) translate(6px, -5px);
+}
+
+/* hidden nav menu */
+/* .nav-menu-area {
+    width: 100%;
+    height: 100%;
+
+    background: hsl(0 0% 100% / 0.1);
+    backdrop-filter: blur(1rem);
+} */
+.nav-menu {
+    position: absolute;
+    top: 150px;
+    left: 0px;
+    width: 250px;
+}
+.nav-menu ul,
+.nav-menu li,
+.nav-menu a {
+    color: rgb(226, 226, 226);
+    text-align: left;
+    text-transform: uppercase;
+    text-decoration: none;
+    list-style-type: none;
+    font-family: 'Montserrat';
+    font-size: 1em;
+    padding: 30px;
+    /* border-bottom: 1px solid #252525; */
+    transition: all 0.2s ease;
+}
+.nav-menu a:hover {
+    color: #ffffff;
+}
+
+.main-section {
+    transition: all 0.3s ease-in;
+}
+/* .main-section.outfoucs {
+    filter: blur(7px);
+    pointer-events: none;
+} */
+
+
+.nav-content {
+    width: 100%;
+    padding: 1% 2.8%;
+
+    display: grid;
+    grid-template-columns: 1fr auto;
+    justify-content: center;
+    align-items: center;
+}
+
+.hotel-logo {
+    justify-self: center;
+}
+.hotel-logo img {
+    /* width: 100%; */
+    position: relative;
+    left: 60%;
+    height: 10vh;
+}
+.booknow-btn {
+    cursor:pointer;
+
+    justify-self: end;
+
+    background-color: transparent;
+	border-radius:28px;
+    border:1px solid #ffffff;
+
+    padding:10px 31px;
+	
+    text-decoration:none;
+    text-transform: uppercase;
+	color:#ffffff;
+    font-family: 'Montserrat';
+    font-size:15px;
+    font-weight: 100;
+
+    text-shadow:0px 1px 0px #ffffff;	
+    transition: transform 0.2s;
+}
+.booknow-btn:hover{
+    transform: scale(1.05);
+}
+
+
+.topnav.scrolled {
+    background: #2e87a5;
+}
